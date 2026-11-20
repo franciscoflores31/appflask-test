@@ -4,6 +4,8 @@ services:
       context: ./app
       dockerfile: Containerfile
     container_name: flask-app
+    environment:
+      - TZ=America/Mexico_City
     restart: unless-stopped
 
   nginx:
